@@ -13,13 +13,15 @@
 		satMassLbl = document.getElementById(opts.satmasslbl);
 		initXLbl = document.getElementById(opts.initxlbl);
 		initYLbl = document.getElementById(opts.initylbl);
-
+		addPlanetBtn = document.getElementById(opts.addplanetbtn);
+		
 		earthMassLbl.innerHTML = opts.defaultearthmass;
 		timeStepLbl.innerHTML = opts.defaulttimestep;
 		satMassLbl.innerHTML = opts.defaultsatmass;
 		initXLbl.innerHTML = opts.defaultinitx;
 		initYLbl.innerHTML = opts.defaultinity;
 		Physics.setTimestep(opts.defaulttimestep);
+
 
 
 		$(earthMass).slider({
@@ -86,10 +88,15 @@
 		$(earthMass).val(opts.defaultearthmass);
 		$(initX).val(opts.defaultinitx);
 		$(initY).val(opts.defaultinity);
+		$(addPlanetBtn).click(addPlanetClicked);
 		$(UI.canvas).click(canvasClicked);
 		$("#RESET_INPUT").click(function() { sats = []; });
 		return UI;
 	};
+
+	function addPlanetClicked(e){
+		sats.push(new Sat({x:315, y:500, u:-.5, v:0, m:10, c:"#FF0000"}));
+	}
 
 	function canvasClicked(e)
 	{

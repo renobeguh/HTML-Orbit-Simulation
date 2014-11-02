@@ -3,7 +3,7 @@
 	{
 		/*background-color:#7070A9;*/
 		/*background-color:#505089;*/
-		background-image: linear-gradient(right , #606099 18%, #9090C9 80%);
+		/*background-image: linear-gradient(right , #606099 18%, #9090C9 80%);
 		background-image: -o-linear-gradient(right , #606099 18%, #9090C9 80%);
 		background-image: -moz-linear-gradient(right , #606099 18%, #9090C9 80%);
 		background-image: -webkit-linear-gradient(right , #606099 18%, #9090C9 80%);
@@ -16,7 +16,7 @@
 			color-stop(0.18, #606099),
 			color-stop(0.8, #9090C9)
 		);
-		font-family:Arial;
+		font-family:Arial;*/
 	}
 
 	div#CONTAINER
@@ -27,6 +27,7 @@
 
 	div#TITLE_HEADER
 	{
+		display: none;
 		text-align:center;
 		font-weight:bold;
 		color:#E0E0E9;
@@ -44,6 +45,7 @@
 /* CONTROL STYLES */
 	div#CONTROLS
 	{
+		display:none;
 		background-color:#7070A9;
 		text-align:center;
 
@@ -119,6 +121,6 @@
 		width:620px;
 		height:580px;
 		float:left;
-		border-radius:10px 35px 35px 10px;
-		-moz-border-radius:10px 35px 35px 10px;
+		/*border-radius:10px 35px 35px 10px;
+		-moz-border-radius:10px 35px 35px 10px;*/
 	}
