@@ -86,7 +86,6 @@
 	    ctx.closePath();
 	    ctx.strokeStyle = "#FFF000";
 	    ctx.stroke();
-	    window.line = {x:sat1.x,y:sat1.y, x2:sat2.x, y2:sat2.y};
 	}
 
 	function drawCircle(opts)
