@@ -12,9 +12,16 @@
 	Renderer.redraw = function()
 	{
 		clearCanvas();
+		
 		for (var sat in sats)
 		{
 			sats[sat].draw();
+
+			//draw lines between satellites
+			var subSats = sats.slice(sat+1,sats.length);
+			for (var sat2 in subSats){
+				drawLine(sats[sat], subSats[sat2]);
+			}
 		}
 		drawEarth();
 	};
@@ -72,6 +79,15 @@
 		}
 	}
 
+	function drawLine(sat1, sat2){
+		ctx.beginPath();
+		ctx.moveTo(sat1.x,sat1.y);
+	    ctx.lineTo(sat2.x,sat2.y);
+	    ctx.closePath();
+	    ctx.strokeStyle = "#FFF000";
+	    ctx.stroke();
+	    window.line = {x:sat1.x,y:sat1.y, x2:sat2.x, y2:sat2.y};
+	}
 
 	function drawCircle(opts)
 	{
